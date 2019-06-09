@@ -1,5 +1,5 @@
 <template>
-    <div class="icons">
+    <div class="icons border-bottom">
         <swiper :options="swiperOption">
             <swiper-slide v-for="(page,index) of pages" :key="index" >
                 <div v-for="item of page" :key="item.id" class="icon">
@@ -89,16 +89,18 @@ export default{
 @import '~@/assets/styles/mixins.styl'
 .icons >>> .swiper-container
     height: 0
-    padding-bottom: 57%
+    padding-bottom: 55%
 .icons >>> .swiper-pagination-bullet-active
     background: rgba(0,175,190,.8)
+.icons >>> .swiper-pagination-bullets
+    bottom: .1rem
 .icons >>> .swiper-pagination-bullet
     width: .12rem
     height: .12rem
 .icons
     width: 100%
     height: 0
-    padding-bottom: 57%
+    padding-bottom: 55%
     overflow: hidden
     margin-top: .1rem
     position: relative
