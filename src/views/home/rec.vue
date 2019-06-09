@@ -1,7 +1,11 @@
 <template>
 	<div class="rec">
-		<div class="subrec border-right"><span class="iconfont">&#xe618;</span>定位失败</div>
-		<div class="subrec border-left"><span class="iconfont">&#xe629;</span>必游榜单</div>
+		<div class="subrec border-right">
+			<span class="iconfont">&#xe618;</span><span>定位失败</span>
+		</div>
+		<div class="subrec border-left">
+			<span class="iconfont">&#xe629;</span><span>必游榜单</span>
+		</div>
 	</div>
 </template>
 
@@ -14,7 +18,6 @@ export default{
 .rec
 	display: flex
 	height: 1rem
-	margin-bottom: .2rem
 .subrec
 	flex: 1
 	line-height: 1rem
