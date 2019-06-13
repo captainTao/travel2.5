@@ -1,0 +1,151 @@
+{
+  "ret": true,
+  "status": 200,
+  "message": "",
+  "data": {
+    "city":"成都",
+    "swiperList": [
+      {
+        "id": "001",
+        "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/aef5f8864f5a1167599609307571b2c4.jpg_750x200_db7bedbe.jpg"
+      },
+      {
+        "id": "002",
+        "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/fe8d03b9f1d5b7391b0c882ca519f279.jpg_750x200_1cc2aa0f.jpg"
+      },
+      {
+        "id": "003",
+        "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20196/b2816bed3f46772d0ba57decd833bc0a.jpg_750x200_0517517a.jpg"
+      },
+      {
+        "id": "004",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1807/5e/cfee2e9e2f357202.jpg_750x200_b0308a43.jpg"
+      }
+    ],
+    "iconList": [
+      {
+        "id": "001",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
+        "desc": "景点门票"
+      },
+      {
+        "id": "002",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
+        "desc": "一日游"
+      },
+      {
+        "id": "003",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
+        "desc": "成都必游"
+      },
+      {
+        "id": "004",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png",
+        "desc": "川剧变脸"
+      },
+      {
+        "id": "005",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/b6/aae239efe3496602.png",
+        "desc": "成都火锅"
+      },
+      {
+        "id": "006",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1805/57/1e29afd06f881102.png",
+        "desc": "稻城亚丁"
+      },
+      {
+        "id": "007",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png",
+        "desc": "游乐场"
+      },
+      {
+        "id": "008",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/54/35899492b1302802.png",
+        "desc": "熊猫基地"
+      },
+      {
+        "id": "009",
+        "imgUrl": "http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
+        "desc": "动植物园"
+      },
+      {
+        "id": "010",
+        "imgUrl": "http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/f04285731d7121da1b9028e2bf431695.png",
+        "desc": "都江堰"
+      }
+    ],
+    "hotList": [
+      {
+        "id": "001",
+        "tagurl": "http://img1.qunarzz.com/piao/fusion/1710/ab/159673b63e6ca702.png",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/201309/24/977fea7b3c5cd758c8d65eac.jpg_250x250_145eeeb5.jpg",
+        "desc": "大熊猫繁育研究基地",
+        "price": "19.8"
+      },
+      {
+        "id": "002",
+        "tagurl": "http://img1.qunarzz.com/piao/fusion/1710/2d/36d0c4adaebbbc02.png",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/201407/03/a584374ee80b738e2600d6bcaf1299e3.jpg_250x250_986e4594.jpg",
+        "desc": "都江堰",
+        "price": "38"
+      },
+      {
+        "id": "003",
+        "tagurl": "http://img1.qunarzz.com/piao/fusion/1710/67/edc47ffef9e96b02.png",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1612/1d/1d9a740c1f9e0efaa3.img.jpg_250x250_427ee986.jpg",
+        "desc": "海昌极地海洋公园",
+        "price": "38"
+      },
+      {
+        "id": "004",
+        "tagurl": "",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1505/b0/b0132e78efa00572.water.jpg_250x250_419e0690.jpg",
+        "desc": "青城山",
+        "price": "28"
+      },
+      {
+        "id": "005",
+        "tagurl": "",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/201403/03/77a8f60ea243465fdf2c937e2edd33dd.jpg_250x250_cbf0adb9.jpg",
+        "desc": "国色天乡·水上乐园",
+        "price": "135"
+      },
+      {
+        "id": "006",
+        "tagurl": "",
+        "imgUrl": "http://img1.qunarzz.com/sight/p0/1807/ad/ad574bfe6c9e1ceda3.img.png_250x250_d7de3c80.png",
+        "desc": "成都欢乐谷",
+        "price": "28"
+      }
+    ],
+    "likeList": [
+      {
+        "id": "001",
+        "tagurl": "http://img1.qunarzz.com/piao/fusion/1710/ab/159673b63e6ca702.png",
+        "imgurl": "http://img1.qunarzz.com/sight/p0/201309/24/977fea7b3c5cd758c8d65eac.jpg_250x250_145eeeb5.jpg",
+        "title": "大熊猫繁育研究基地",
+        "price": "19.8",
+        "score": 7,
+        "com": "看！熊猫宝宝在向你招手呢"
+      },
+      {
+        "id": "002",
+        "tagurl": "http://img1.qunarzz.com/piao/fusion/1710/2d/36d0c4adaebbbc02.png",
+        "imgurl": "http://img1.qunarzz.com/sight/p0/201407/03/a584374ee80b738e2600d6bcaf1299e3.jpg_250x250_986e4594.jpg",
+        "title": "都江堰",
+        "price": "38",
+        "score": 3.6,
+        "com": ""
+      },
+      {
+        "id": "003",
+        "tagurl": "http://img1.qunarzz.com/piao/fusion/1710/67/edc47ffef9e96b02.png",
+        "imgurl": "http://img1.qunarzz.com/sight/p0/1612/1d/1d9a740c1f9e0efaa3.img.jpg_250x250_427ee986.jpg",
+        "title": "海昌极地海洋公园",
+        "price": "118",
+        "score": 4.7,
+        "com": "蠢萌企鹅陪你嗨翻这个秋"
+      }
+    ]
+  }
+}

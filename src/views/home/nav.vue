@@ -2,13 +2,16 @@
   <div class="header">
      <div class="header-left"><span class="iconfont">&#xe624;</span></div>
      <div class="header-input"><input class="iconfont" type="text" :placeholder="icon"/></div>
-     <div class="header-right">城市<span class="iconfont">&#xe6aa;</span></div>
+     <div class="header-right">{{this.city}}<span class="iconfont">&#xe6aa;</span></div>
   </div>
 </template>
 
 <script>
 export default{
 	name: 'myNav',
+	props: {
+		city: String
+	},
 	data(){
 		return {
 			icon:'\ue632 输入城市/景点/游玩主题'

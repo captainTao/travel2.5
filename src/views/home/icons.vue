@@ -1,6 +1,6 @@
 <template>
     <div class="icons border-bottom">
-        <swiper :options="swiperOption">
+        <swiper :options="swiperOption" v-if='showSwiper'>
             <swiper-slide v-for="(page,index) of pages" :key="index" >
                 <div v-for="item of page" :key="item.id" class="icon">
                     <a href="avascript:;">
@@ -19,48 +19,11 @@
 <script>
 export default{
     name:'icons',
+    props: {
+        iconList: Array
+    },
     data(){
         return{
-            iconList:[{
-                id:'001',
-                imgUrl:"http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png",
-                desc:"景点门票"
-            },{
-                id:'002',
-                imgUrl:"http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png",
-                desc:"一日游"
-            },{
-                id:'003',
-                imgUrl:"http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png",
-                desc:"成都必游"
-            },{
-                id:'004',
-                imgUrl:"http://img1.qunarzz.com/piao/fusion/1803/e3/67df61427c8e1302.png",
-                desc:"川剧变脸"
-            },{
-                id:'005',
-                imgUrl:"http://img1.qunarzz.com/piao/fusion/1803/b6/aae239efe3496602.png",
-                desc:"成都火锅"
-            },{
-                id:'006',
-                imgUrl:"http://img1.qunarzz.com/piao/fusion/1805/57/1e29afd06f881102.png",
-                desc:"稻城亚丁"
-            },{id:'007',
-                imgUrl:"http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png",
-                desc:"游乐场"
-            },{
-                id:'008',
-                imgUrl:"http://img1.qunarzz.com/piao/fusion/1803/54/35899492b1302802.png",
-                desc:"熊猫基地"
-            },{
-                id:'009',
-                imgUrl:"http://img1.qunarzz.com/piao/fusion/1803/76/eb88861d78fb9902.png",
-                desc:"动植物园"
-            },{
-                id:'010',
-                imgUrl:"http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/f04285731d7121da1b9028e2bf431695.png",
-                desc:"都江堰"
-            }],
             swiperOption:{
                 pagination:'.swiper-pagination',
                 loop: true,
@@ -69,6 +32,9 @@ export default{
         }
     },
     computed:{
+        showSwiper(){
+            return this.iconList.length
+        },
         pages(){
             const pages = []
             this.iconList.forEach(function(item, index){
