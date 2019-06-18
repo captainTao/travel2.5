@@ -6,7 +6,6 @@
     <home-rec></home-rec>
     <home-hot :hotList='hotList'></home-hot>
     <home-like :likeList='likeList'></home-like>
-    <router-link to="/list">Go to List</router-link>
   </div>
 </template>
 
@@ -19,7 +18,7 @@ import homeRec from '@/views/home/rec.vue'
 import homeHot from '@/views/home/hot.vue'
 import homeLike from '@/views/home/like.vue'
 import axios from 'axios'
-import { mapState } from 'vuex'
+// import { mapState } from 'vuex'
 
 export default {
   name: 'home',
@@ -51,7 +50,7 @@ export default {
         .then(this.getHomeInfoSucc)
     },
     getHomeInfoSucc(res){
-      console.log(res)
+      // console.log(res)
       res = res.data
       if(res.ret && res.data){
         const data = res.data
