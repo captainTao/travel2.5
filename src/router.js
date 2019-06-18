@@ -21,5 +21,15 @@ export default new Router({
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/City.vue')
     }
-  ]
+  ],
+  // 系统的scroll锚点方法
+  // https://segmentfault.com/q/1010000007888351
+  scrollBehavior (to) {
+      if (to.hash) {
+        return {
+          selector: to.hash
+          // offset: {x: 0, y:0}//这儿需要问一下、
+        }
+      }
+    }
 })

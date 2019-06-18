@@ -9,8 +9,8 @@
                     </ul>
                 </div>
             </div>
-            <div class="licity" v-for="(item, key) of cities" :key="key">
-                <div class="title">{{key}}</div>
+            <div class="licity" v-for="(item, key) of cities" :key="key" :ref="key">
+                <div class="title" :id="key">{{key}}</div>
                 <div class="cities">
                     <ul>
                         <li v-for="innerItem of item" :key="innerItem.id">{{innerItem.name}}</li>
@@ -22,17 +22,33 @@
 </template>
 
 <script>
-import BScroll from '@better-scroll/core'
+import BScroll from 'better-scroll'
 export default{
     name: 'citylist',
     props:{
         hotCities: Array,
-        cities: Object
+        cities: Object,
+        letter: String
     },
     mounted(){
-        // let wrapper = document.querySelector('.wrapper')
+        // let wrapper = document.querySelector('.wrapper') 
         // this.scroll = new BScroll(wrapper)
+        // vue中用ref来传递dom元素
         this.scroll = new BScroll(this.$refs.wrapper)
+    },
+    watch:{
+        // letter(val, oldval){
+        letter(){
+            // console.log(val,oldval)
+            if (this.letter) {
+                // let id = this.letter
+                // const element = this.$refs[id][0]
+                // console.log(element)
+                //这儿为什么用id获取不到？
+                const element = this.$refs[this.letter][0]
+                this.scroll.scrollToElement(element)
+            }
+        }
     }
 }
 </script>

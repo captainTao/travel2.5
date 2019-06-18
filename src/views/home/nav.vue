@@ -32,6 +32,7 @@ export default{
     color: #fff
 .header-left
     width: .64rem
+    font-weight: bold
 .header-input
     flex:1
     background: #fff

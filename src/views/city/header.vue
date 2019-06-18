@@ -27,15 +27,17 @@ export default{
 
 .nav
     background: $bgColor
-    line-height: .7rem
+    line-height: .86rem
     color: #fff
     font-weight: bold
+    height: 1.5rem
 .top, .bottom
     margin: 0 .2rem
     height: .7rem
 .top span
     float: left
     color: #fff
+    height: .86rem
 .f1
     flex: 1
 .bottom

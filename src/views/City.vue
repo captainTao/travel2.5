@@ -1,8 +1,8 @@
 <template>
   <div class="city">
     <city-header></city-header>  
-    <city-list :hotCities="hotCities" :cities="cities"></city-list>
-    <city-slide></city-slide>
+    <city-list :hotCities="hotCities" :cities="cities" :letter='letter'></city-list>
+    <city-slide :cities="cities" @change='anchorChange'></city-slide>
     <h1>This is the city page</h1>
     <router-link to="/">Go to Home</router-link>
   </div>
@@ -23,7 +23,8 @@ export default {
   data(){
     return{
       hotCities:[],
-      cities:{}
+      cities:{},
+      letter:''
     }
   },
   methods: {
@@ -37,6 +38,9 @@ export default {
         this.hotCities=data.hotCities
         this.cities=data.cities
       }
+    },
+    anchorChange(letter){
+      this.letter = letter
     }
   },
   mounted(){
