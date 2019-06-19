@@ -2,6 +2,9 @@
 仿去哪儿网-vue project
 vue --version
 3.7.0
+用到的组件：
+五星好评, better-scroll, swiper
+
 ## Project setup
 ```
 npm install
