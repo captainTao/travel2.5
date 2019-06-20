@@ -24,7 +24,9 @@ export default{
     data(){
         return{
             touchstatus: false,
-            letterlist:[]
+            letterlist:[],
+            startY: 0,
+            timmer: null
         }
     },
     watch:{
@@ -33,6 +35,9 @@ export default{
                this.letterlist.push(key)
             }
         }
+    },
+    updated(){
+        this.startY = this.$refs['A'][0].offsetTop
     },
     methods: {
         //自定义goAnchor方法：可以包装成 mixin 或 directive进行复用
@@ -49,10 +54,17 @@ export default{
         },
         touchmoveRes(e){
             if (this.touchstatus) {
-                const startY = this.$refs['A'][0].offsetTop
-                const touchY = e.touches[0].clientY-75
-                const index = Math.floor((touchY-startY)/24)
-                this.$emit('change', this.letterlist[index-1])
+                if(this.timmer){
+                    clearTimeout(this.timmer)
+                }
+                //节流：限制函数执行的频率
+                this.timmer = setTimeout(()=>{
+                    const touchY = e.touches[0].clientY-75
+                    const index = Math.floor((touchY-this.startY)/25)
+                    if (0<index && index<=this.letterlist.length) {
+                        this.$emit('change', this.letterlist[index-1])
+                    }
+                },5)
             }
         },
         touchendRes(){
@@ -75,6 +87,8 @@ export default{
     flex-direction: column
     justify-content: center
 .slide li
-    padding-top: .2rem
+    // padding-top: .2rem
+    height: .5rem
+    line-height: .5rem
     color: $bgColor
 </style>
