@@ -1,10 +1,8 @@
 <template>
   <div class="city">
-    <city-header></city-header>  
+    <city-header :cities="cities"></city-header>  
     <city-list :hotCities="hotCities" :cities="cities" :letter='letter'></city-list>
     <city-slide :cities="cities" @change='anchorChange'></city-slide>
-    <h1>This is the city page</h1>
-    <router-link to="/">Go to Home</router-link>
   </div>
 </template>
 

@@ -49,6 +49,7 @@ export default{
 .header-right
     width: 1.24rem
     color: #fff
+    height:  .86rem
 .header-right span
     margin-left:.05rem
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder

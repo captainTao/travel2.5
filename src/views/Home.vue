@@ -29,7 +29,7 @@ export default {
     homeIcons,
     homeRec,
     homeHot,
-    homeLike
+    homeLike,
   },
   data(){
     return{

@@ -3,3 +3,7 @@
 	width: .12rem;
     height: .12rem;
 }
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder
+{
+    color: #ccc
+}
