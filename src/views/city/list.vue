@@ -5,7 +5,7 @@
                 <div class="title">热门城市</div>
                 <div class="cities">
                     <ul>
-                        <li v-for="item of hotCities" :key="item.id">{{item.name}}</li>
+                        <li v-for="item of hotCities" :key="item.id" @click="handleClick(item.name)">{{item.name}}</li>
                     </ul>
                 </div>
             </div>
@@ -13,7 +13,7 @@
                 <div class="title" :id="key">{{key}}</div>
                 <div class="cities">
                     <ul>
-                        <li v-for="innerItem of item" :key="innerItem.id">{{innerItem.name}}</li>
+                        <li v-for="innerItem of item" :key="innerItem.id" @click="handleClick(innerItem.name)">{{innerItem.name}}</li>
                     </ul>
                 </div>
             </div>
@@ -23,6 +23,7 @@
 
 <script>
 import BScroll from 'better-scroll'
+import {mapMutations} from 'vuex'
 export default{
     name: 'citylist',
     props:{
@@ -30,11 +31,20 @@ export default{
         cities: Object,
         letter: String
     },
+    methods:{
+        handleClick(city){
+            // this.$store.dispatch('changeCity', city)  //可以不通过dispatch去调用方法，可以直接通过commit方法
+            // this.$store.commit('changeCity',city)
+            this.changeCity(city) //用map的方法进行简写
+            this.$router.push('/')
+        },
+        ...mapMutations(['changeCity'])
+    },
     mounted(){
         // let wrapper = document.querySelector('.wrapper') 
         // this.scroll = new BScroll(wrapper)
         // vue中用ref来传递dom元素
-        this.scroll = new BScroll(this.$refs.wrapper)
+        this.scroll = new BScroll(this.$refs.wrapper,{click: true})
     },
     watch:{
         // letter(val, oldval){

@@ -9,15 +9,19 @@
 </template>
 
 <script>
+import {mapState} from 'vuex'
 export default{
     name: 'myNav',
-    props: {
-        city: String
-    },
     data(){
         return {
             icon:'\ue632 输入城市/景点/游玩主题'
         }
+    },
+    computed:{
+        ...mapState(['city'])
+        // ...mapState({
+        //  currentCity: 'city' //可以是数组，也可以是一个对象，即city映射到currentCity
+        // })
     }
 }
 </script>
@@ -47,9 +51,10 @@ export default{
     color: green
     font-size: .3rem
 .header-right
-    width: 1.24rem
+    min-width: 1.04rem
     color: #fff
     height:  .86rem
+    margin: 0 .1rem 0 .05rem
 .header-right span
     margin-left:.05rem
 input::-webkit-input-placeholder, textarea::-webkit-input-placeholder

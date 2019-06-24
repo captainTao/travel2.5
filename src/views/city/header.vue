@@ -18,7 +18,7 @@
     </div>
     <div class="searchContent" v-if="keyword" ref="search">
         <ul>
-            <li v-for="(item,index) of resultlist" :key="index" >{{item}}</li>
+            <li v-for="(item,index) of resultlist" :key="index" @click="handleClick(item)">{{item}}</li>
             <li v-if="!resultlist.length" class="lastli">没有找到相匹配的数据</li>
         </ul>
     </div>
@@ -45,7 +45,12 @@ export default{
         switchPlan(){
             this.seen = !this.seen
         },
-        keywordSearch(){}
+        keywordSearch(){},
+        handleClick(city){
+            this.$store.commit('changeCity', city)
+            this.$router.push('/')
+            this.keyword = ''
+        }
     },
     mounted(){
         // 在这儿加载scroll报错是因为获取不到dom
@@ -73,8 +78,8 @@ export default{
             // 延时执行是因为生命周期，在mounted的时候没获取到DOM
             if(result.length){
                 this.timer=setTimeout(() =>{
-                    this.scroll = new BScroll(this.$refs.search)
-                },100)
+                    this.scroll = new BScroll(this.$refs.search,{click: true})
+                },10)
             }
         } 
     }
