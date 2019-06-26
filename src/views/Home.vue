@@ -18,7 +18,7 @@ import homeRec from '@/views/home/rec.vue'
 import homeHot from '@/views/home/hot.vue'
 import homeLike from '@/views/home/like.vue'
 import axios from 'axios'
-// import { mapState } from 'vuex'
+import { mapState } from 'vuex'
 
 export default {
   name: 'home',
@@ -40,7 +40,7 @@ export default {
     }
   },
   computed: {
-    // ...mapState(['city'])
+    ...mapState(['city'])
   },
   methods: {
     getHomeInfo(){
@@ -63,7 +63,7 @@ export default {
     this.lastCity = this.city
     this.getHomeInfo()
   },
-  activated(){
+  activated(){ // 当城市改变的时候，才发ajax请求
     if (this.lastCity !== this.city) {
       this.lastCity = this.city
       this.getHomeInfo()
