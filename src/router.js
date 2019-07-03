@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from './views/Home.vue'
+import Detail from './views/detail.vue'
 
 Vue.use(Router)
 
@@ -20,16 +21,22 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/City.vue')
+    },
+    {
+      path: '/detail/:id',
+      name: 'detail',
+      component: Detail
     }
   ],
   // 系统的scroll锚点方法
   // https://segmentfault.com/q/1010000007888351
   scrollBehavior (to) {
-      if (to.hash) {
-        return {
-          selector: to.hash
-          // offset: {x: 0, y:0}//这儿需要问一下、
-        }
-      }
+      // if (to.hash) {
+      //   return {
+      //     selector: to.hash,
+      //     offset: {x: 0, y:0}//这儿需要问一下、
+      //   }
+      // }
+      return{x:0,y:0}
     }
 })

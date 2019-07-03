@@ -12,12 +12,12 @@
 		</div>
 		<div class="hotContent">
 			<ul>
-				<li class="hotli" v-for='item of hotList' :key=item.id>
+				<router-link tag="li" :to="'/detail/'+item.id" class="hotli" v-for='item of hotList' :key=item.id>
 					<div class="hottag"><img :src="item.tagurl"></div>
 					<div class="hotpic"><img :src="item.imgUrl"></div>
 					<div class="hotdesc">{{item.desc}}</div>
 					<div class="hotprice"><span>￥{{item.price}}</span>起</div>
-				</li>
+				</router-link>
 			</ul>
 		</div>
 	</div>

@@ -6,7 +6,7 @@
 		</div>
 		<div class="likeContent">
 			<ul>
-				<li class="likeli border-bottom" v-for='item of likeList' :key=item.id>
+				<router-link tag="li" :to="'/detail/'+item.id" class="likeli border-bottom" v-for='item of likeList' :key=item.id>
 					<div class="left">
 						<div class="liketag"><img :src="item.tagurl"></div>
 						<div class="likepic"><img :src="item.imgurl"></div>
@@ -17,7 +17,7 @@
 						<div class="likeprice"><span>￥{{item.price}}</span>起</div>
 						<div class="likecomment">{{item.com}}</div>
 					</div>
-				</li>
+				</router-link>
 			</ul>
 		</div>
 	</div>
