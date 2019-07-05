@@ -8,7 +8,7 @@
         v-for="(item, key) of cities" :key="key"
         :ref='key' 
         @click="anchorClick"
-        @touchstart="touchstartRes"
+        @touchstart.prevent="touchstartRes"
         @touchmove="touchmoveRes"
         @touchend="touchendRes"
         >{{key}}</li>
@@ -80,7 +80,7 @@ export default{
 
 .slide
     position: absolute
-    top: 2rem
+    top: 2.5rem
     right: .2rem
     bottom: 1rem
     display: flex
@@ -88,7 +88,7 @@ export default{
     justify-content: center
 .slide li
     // padding-top: .2rem
-    height: .5rem
-    line-height: .5rem
+    height: .4rem
+    line-height: .4rem
     color: $bgColor
 </style>
