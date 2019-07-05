@@ -7,16 +7,20 @@
         <div class="ctx"><p>三亚海上观光巴士</p></div>
         <div class="pic">26</div>
       </div>
-      <detail-preview v-if='showPreview' @back="viewback"></detail-preview>        
+      <fade-animation>
+        <detail-preview v-if='showPreview' @back="viewback"></detail-preview>  
+      </fade-animation>      
     </div>
 </template>
 
 <script>
 import detailPreview from '@/views/detail/preview.vue'
+import fadeAnimation from '@/components/fade.vue'
 export default {
   name: 'detailHeader',
   components:{
-    detailPreview
+    detailPreview,
+    fadeAnimation
   },
   data(){
     return{
