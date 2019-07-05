@@ -38,6 +38,8 @@ export default new Router({
   //       }
   //     }
   //   }
+  
+  //   页面切换的时候，回到最顶部
   scrollBehavior () {
       return{x:0,y:0}
     }

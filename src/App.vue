@@ -1,11 +1,6 @@
 <template>
   <div id="app">
- <!--    <div id="nav">
-      <router-link to="/">Home</router-link> |
-      <router-link to="/about">List</router-link>
-    </div> -->
-    
-    <keep-alive>
+    <keep-alive exclude='detail'>
       <router-view/>
     </keep-alive>   
   </div>
