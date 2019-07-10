@@ -35,10 +35,10 @@ export default {
         }
     }
   },
-  activated(){
+  mounted(){
     window.addEventListener('scroll', this.handleScoll)
   },
-  deactivated(){
+  destroyed(){
     window.removeEventListener('scroll', this.handleScoll)
   }
 }
