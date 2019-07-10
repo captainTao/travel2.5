@@ -8,8 +8,8 @@
         v-for="(item, key) of cities" :key="key"
         :ref='key' 
         @click="anchorClick"
-        @touchstart.prevent="touchstartRes"
-        @touchmove="touchmoveRes"
+        @touchstart="touchstartRes"
+        @touchmove.prevent="touchmoveRes"
         @touchend="touchendRes"
         >{{key}}</li>
     </ul>
@@ -60,7 +60,7 @@ export default{
                 //节流：限制函数执行的频率
                 this.timmer = setTimeout(()=>{
                     const touchY = e.touches[0].clientY-75
-                    const index = Math.floor((touchY-this.startY)/25)
+                    const index = Math.floor((touchY-this.startY)/20)
                     if (0<index && index<=this.letterlist.length) {
                         this.$emit('change', this.letterlist[index-1])
                     }
@@ -80,9 +80,8 @@ export default{
 
 .slide
     position: absolute
-    top: 2.5rem
+    top: 1.8rem
     right: .2rem
-    bottom: 1rem
     display: flex
     flex-direction: column
     justify-content: center

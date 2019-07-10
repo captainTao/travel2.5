@@ -51,7 +51,7 @@ export default {
     display: flex
     align-items: center
 .detailPreivew
-    position: absolute
+    position: fixed
     left: 0
     top: 0
     bottom: 0
@@ -62,6 +62,7 @@ export default {
     z-index: 99
     display: flex
     align-items: center
+    overflow: hidden
 .detailPreivew img
     width: 100%
 </style>
